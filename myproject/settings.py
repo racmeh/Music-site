@@ -25,7 +25,7 @@ SECRET_KEY = 'npg-8)lf53gko88%ovg!zm#2y47g2nuz%)ab#+*^#6+r$smzv('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 
 # Application definition
@@ -69,18 +69,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
-
-
-DATABASES = {
-   'default': {
-      'ENGINE': 'django.db.backends.postgresql_psycopg2',
-      'NAME': 'newdb',
-      'USER': 'postgres',
-      'PASSWORD': 'postgres',
-      'HOST': 'localhost',
-      'PORT': '5432',
-   }
-}
 
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
@@ -129,3 +117,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')

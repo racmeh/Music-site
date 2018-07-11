@@ -1,0 +1,10 @@
+<img src="{{album.pub_date}}" width="150px" height="150px">
+
+<h1>{{album.album_name}}</h1>
+<h3>{{album.singer_name}}</h3>
+
+<ul>
+{% for sn in album.song_set.all %}
+<li>{{sn.song_name}} - {{sn.singer_name}}</li>
+{% endfor %}
+</ul>
